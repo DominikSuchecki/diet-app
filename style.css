@@ -1,0 +1,77 @@
+body{
+    scroll-behavior: smooth;
+}
+
+.fade-enter{
+    opacity: 0;
+    z-index: 1;
+}
+
+.fade-enter.fade-enter-active{
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.container{
+    margin-top: 1em;
+    margin-bottom: 6em;
+}
+
+.react-calendar__tile{
+    border-radius: 0.25rem;
+}
+
+.activity-tile{
+  background-color: green!important;
+}
+
+.diet-tile{
+    background-color: orange!important;
+}
+
+.both-tile{
+  background-color: blue!important;
+}
+
+.react-calendar{
+    border-radius: 0.5rem;
+}
+
+.table-responsive{
+    max-height: 300px;
+}
+
+.navbar{
+    padding: 4px 0px 4px 0px!important;
+}
+
+.navbar .nav-link p{
+    margin: 0;
+    font-size: 12px;
+}
+
+.navbar.fixed-bottom{
+    box-shadow: 0 -12px 12px 0 rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.05);
+}
+
+.nav-link.active{
+    color: var(--mdb-primary)!important;
+}
+
+.link-inactive{
+    color: var(--mdb-navbar-color)!important;
+    transition: all ease 0.15s;
+}
+
+.link-inactive:hover{
+    color: var(--mdb-navbar-color-hover)!important;
+}
+
+.nav-link.link-inactive{
+    color: var(--mdb-navbar-color)!important;
+    transition: all ease 0.15s;
+}
+
+.nav-link.link-inactive:hover{
+    color: var(--mdb-navbar-color-hover)!important;
+}
