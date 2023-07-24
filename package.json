@@ -1,16 +1,15 @@
 {
-  "homepage": "https://dominiksuchecki.github.io/react-app/",
+  "homepage": "http://dominiksuchecki.github.io/react-app/",
   "name": "vite-project",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^1.4.0",
