@@ -286,10 +286,14 @@ function Diet(){
 
 	<div className="card mt-3">
 		<div className="card-body">
-			Kalorie {productsSummary?.Calories}/{lastConfig?.Calories}
-			Węglowodany {productsSummary?.Carbs}/{lastConfig?.Carbs}
-			Tłuszcze {productsSummary?.Fats}/{lastConfig?.Fats}
-			Białko {productsSummary?.Proteins}/{lastConfig?.Proteins}
+			<table className='table'>
+				<tr>
+					<td>Kalorie {productsSummary?.Calories}/{lastConfig?.Calories}</td>
+					<td>Węglowodany {productsSummary?.Carbs}/{lastConfig?.Carbs}</td>
+					<td>Tłuszcze {productsSummary?.Fats}/{lastConfig?.Fats}</td>
+					<td>Białko {productsSummary?.Proteins}/{lastConfig?.Proteins}</td>
+				</tr>
+			</table>	
 		</div>
 	</div>
 
@@ -316,7 +320,7 @@ function Diet(){
   </li>
   <li className="nav-item" role="presentation">
     <a className="nav-link shadow-3" id="ex-with-icons-tab-2" data-mdb-toggle="tab" href="#ex-with-icons-tabs-2" role="tab"
-      aria-controls="ex-with-icons-tabs-2" aria-selected="false"><i className="fa-regular fa-bowl-food fa-xl me-2"></i>Dania</a>
+      aria-controls="ex-with-icons-tabs-2" aria-selected="false"><i className="fa-regular fa-plate-utensils fa-xl me-2"></i>Dania</a>
   </li>
 </ul>
 

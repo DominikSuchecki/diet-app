@@ -12,11 +12,6 @@ body{
     transition: opacity 500ms ease-in;
 }
 
-.container{
-    margin-top: 1em;
-    margin-bottom: 6em;
-}
-
 .react-calendar__tile{
     border-radius: 0.25rem;
 }

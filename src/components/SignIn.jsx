@@ -10,6 +10,7 @@ function SignIn() {
   const {setId, setRole, setAuth, setUser} = useContext(AuthContext);
 
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(true);
   const [message, setMessage] = useState("");
@@ -33,13 +34,13 @@ function SignIn() {
             auth: true
           });
 
-          Cookies.set('userData', userData);
+          Cookies.set('userData', userData, { expires: 21 });
         }
         
         navigate('/');
       }
       else{
-        setMessage(response.data.Response);
+        setMessage('Niepoprawne dane logowania...');
       }
     })
     .catch((error) => {
@@ -85,14 +86,16 @@ function SignIn() {
           <div className="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
             <form onSubmit={handleLogin}>
               <div className="mb-2">
-                <label className="form-label" htmlFor="loginName">Nazwa użytkownika</label>
-                <input type="text" id="loginName" className="form-control" onChange={(e) => setUsername(e.target.value)}/>
+                <label className="form-label" htmlFor="loginName">Nazwa użytkownika / Email</label>
+                <input type="text" id="loginName" className="form-control" onChange={(e) => { setUsername(e.target.value), setEmail(e.target.value) } }/>
               </div>
 
               <div className="mb-4">
                 <label className="form-label" htmlFor="loginPassword">Hasło</label>
                 <input type="password" id="loginPassword" className="form-control" onChange={(e) => setPassword(e.target.value)}/>
               </div>
+
+              <p className='text-danger'>{message}</p>
 
               <div className="row mb-4">
                 <div className="col-md-6">
@@ -102,6 +105,7 @@ function SignIn() {
                   </div>
                 </div>
               </div>
+
               <div className='d-flex justify-content-center'>
                 <button type="submit" className="btn btn-primary mb-4">Zaloguj się</button>
               </div>
@@ -113,6 +117,11 @@ function SignIn() {
               <div className="mb-2">
                 <label className="form-label" htmlFor="registerUsername">Nazwa użytkownika</label>
                 <input type="text" id="registerUsername" className="form-control" onChange={(e) => setUsername(e.target.value)}/>
+              </div>
+
+              <div className="mb-2">
+                <label className="form-label" htmlFor="registerEmail">Email</label>
+                <input type="email" id="registerEmail" className="form-control" onChange={(e) => setEmail(e.target.value)}/>
               </div>
 
               <div className="mb-2">

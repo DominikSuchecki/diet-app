@@ -4,7 +4,9 @@ import { useContext, lazy, Suspense } from 'react';
 import ProtectedRoute from './ProtectedRoute';
 import NavbarUser from './NavbarUser';
 import NavbarGuest from './NavbarGuest';
+import Hero from './Hero';
 
+const Account = lazy(() => import('./Account'));
 const Activity = lazy(() => import('./Activity'));
 const Calc = lazy(() => import('./Calc'));
 const Log = lazy(() => import('./Log'));
@@ -23,26 +25,30 @@ function Nav() {
   return (
     <>
       {auth ? <NavbarUser /> : <NavbarGuest />}
-      
-      <Suspense>
-        <Routes>
-          <Route element={<ProtectedRoute />}>
-            <Route path="dashboard" element={<div className='container'> <Dashboard /> </div>} />
-            <Route path="log" element={<div className='container'> <Log /> </div>} />
-            <Route path="diet" element={<div className='container'> <Diet /> </div>} />
-            <Route path="adjust" element={<div className='container'> <AdjustDiet /> </div>} />
-            <Route path="recipes/details/:id" element={<div className='container'> <Recipe /> </div>} />
-          </Route>
 
-          <Route path="calculator" element={<div className='container'> <Calc /> </div>} />
-          <Route path="activity" element={<div className='container'> <Activity /> </div>} />
-          <Route path="products" element={<div className='container'> <Products /> </div>} />
-          <Route path="recipes" element={<div className='container'> <Recipes /> </div>} />
-          <Route path="signIn" element={<div className='container'> <SignIn /> </div>} />
+      <div className='container mt-4 mb-4'>
+        <Suspense>
+          <Routes>
+            <Route element={<ProtectedRoute />}>
+              <Route path="dashboard" element={<Dashboard />}/>
+              <Route path="log" element={<Log /> }/>
+              <Route path="diet" element={<Diet /> } />
+              <Route path="adjust" element={<AdjustDiet /> } />
+              <Route path="recipes/details/:id" element={<Recipe /> } />
+              <Route path="account" element={<Account />} />
+            </Route>
 
-          <Route path="*" element={<div className='container'> <NotFound /> </div>} />
-        </Routes>
-      </Suspense>
+            <Route path="calculator" element={<Calc /> } />
+            <Route path="activity" element={<Activity /> } />
+            <Route path="products" element={<Products /> } />
+            <Route path="recipes" element={<Recipes /> } />
+            <Route path="signIn" element={<SignIn /> } />
+
+            <Route path="/" element={<Hero />} />
+            <Route path="*" element={<NotFound /> } />
+          </Routes>
+        </Suspense>
+      </div>
     </>
   );
 }

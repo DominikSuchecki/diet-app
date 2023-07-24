@@ -32,7 +32,7 @@ function NavbarUser() {
             <NavLink className="nav-link" to="log"><i className="fa-regular fa-calendar fa-xl"></i><p>DZIENNIK</p></NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link link-inactive" data-mdb-toggle="modal" data-mdb-target="#logutModal"><i className="fa-regular fa-circle-arrow-right fa-xl"></i><p>WYLOGUJ</p></NavLink>
+            <NavLink className="nav-link link-inactive" data-mdb-toggle="modal" data-mdb-target="#logoutModal"><i className="fa-regular fa-circle-arrow-right fa-xl"></i><p>WYLOGUJ</p></NavLink>
           </li>
         </ul>
         </div>
@@ -55,13 +55,13 @@ function NavbarUser() {
           <NavLink className="nav-link" to="log"><i className="fa-regular fa-calendar fa-xl"></i><p>DZIENNIK</p></NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link link-inactive" data-mdb-toggle="modal" data-mdb-target="logutModal"><i className="fa-regular fa-circle-arrow-right fa-xl"></i><p>WYLOGUJ</p></NavLink>
+          <NavLink className="nav-link link-inactive" data-mdb-toggle="modal" data-mdb-target="#logoutModal"><i className="fa-regular fa-circle-arrow-right fa-xl"></i><p>WYLOGUJ</p></NavLink>
         </li>
       </ul>
     </div>
     </nav>
 
-    <div className="modal fade" id="logutModal" tabIndex={-1} aria-labelledby="logutModal" aria-hidden="true">
+    <div className="modal fade" id="logoutModal" tabIndex={-1} aria-labelledby="logoutModal" aria-hidden="true">
 		<div className="modal-dialog" style={{maxWidth:400}}>
 			<div className="modal-content">
 			<div className="modal-header">

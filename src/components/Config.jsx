@@ -39,7 +39,7 @@ function Config(){
 				</tr>
 				) : (
 				<tr>
-					<td colSpan={4}>Ustal zapotrzebowanie za pomocą <Link to='/activity'>kalkulatora</Link></td>
+					<td colSpan={4}>Zalecamy ustalić zapotrzebowanie za pomocą <Link to='/calculator'>kalkulatora</Link></td>
 				</tr>
 				)}
 		</tbody>
