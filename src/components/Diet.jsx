@@ -283,28 +283,40 @@ function Diet(){
 		</div>
   </div>
 </div>
-		<table className='table table-sm mt-3'>
-			<tbody>
-				<tr>
-					<th className='fw-bold'>Kalorie {productsSummary?.Calories}/{lastConfig?.Calories}</th>
-					<th className='fw-bold'>Węglowodany {productsSummary?.Carbs}/{lastConfig?.Carbs}</th>
-					<th className='fw-bold'>Tłuszcze {productsSummary?.Fats}/{lastConfig?.Fats}</th>
-					<th className='fw-bold'>Białko {productsSummary?.Proteins}/{lastConfig?.Proteins}</th>
-				</tr>
-			</tbody>
-		</table>
+
+	<div className="card mt-3">
+		<div className="card-body">
+			Kalorie {productsSummary?.Calories}/{lastConfig?.Calories}
+			Węglowodany {productsSummary?.Carbs}/{lastConfig?.Carbs}
+			Tłuszcze {productsSummary?.Fats}/{lastConfig?.Fats}
+			Białko {productsSummary?.Proteins}/{lastConfig?.Proteins}
+		</div>
 	</div>
+
+		<div className='mt-3 d-md-flex d-none'>
+			<div className='col-lg-4 '>
+				<button className='btn btn-danger' onClick={deleteDay}><i className='fa-solid fa-trash me-2'></i>Wyczyść</button>
+			</div>
+			<div className='col col-lg-8'>
+				<div className="input-group">	
+						<input type="date" className='form-control' defaultValue={date}/>
+						<button className='btn btn-primary'>Zapisz dzień</button>
+				</div>
+			</div>
+		</div>
+	</div>
+		
 		
 	<div className='col-lg-6'>
 
 <ul className="nav nav-pills mb-3 nav-fill" id="ex-with-icons" role="tablist">
   <li className="nav-item" role="presentation">
     <a className="nav-link shadow-3 active" id="ex-with-icons-tab-1" data-mdb-toggle="tab" href="#ex-with-icons-tabs-1" role="tab"
-      aria-controls="ex-with-icons-tabs-1" aria-selected="true"><i className="fas fa-apple-whole fa-fw me-2"></i>Produkty</a>
+      aria-controls="ex-with-icons-tabs-1" aria-selected="true"><i className="fa-regular fa-apple-whole fa-xl me-2"></i>Produkty</a>
   </li>
   <li className="nav-item" role="presentation">
     <a className="nav-link shadow-3" id="ex-with-icons-tab-2" data-mdb-toggle="tab" href="#ex-with-icons-tabs-2" role="tab"
-      aria-controls="ex-with-icons-tabs-2" aria-selected="false"><i className="fas fa-bowl-food fa-fw me-2"></i>Dania</a>
+      aria-controls="ex-with-icons-tabs-2" aria-selected="false"><i className="fa-regular fa-bowl-food fa-xl me-2"></i>Dania</a>
   </li>
 </ul>
 
@@ -398,22 +410,24 @@ function Diet(){
 			</table>
 		</div>
   </div>
-
-	<div className='mt-3 row'>
-		<div className='col col-lg-3'>
+	
+	<div className='row mt-3'>
+		<div className='col-lg-4 col-sm-12'>
 			<button type="button" className="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#addModal">Dodaj produkt</button>
 		</div>
-		<div className='col col-lg-3'>
-			<button className='btn btn-danger' onClick={deleteDay}><i className='fa-solid fa-trash'></i> Wyczyść</button>
-		</div>
-		<div className='col col-lg-6'>
-			<div className="input-group">	
-					<input type="date" className='form-control' defaultValue={date}/>
-					<button className='btn btn-primary'>Zapisz dzień</button>
+			<div className='mt-3 d-s -flex d-none'>
+				<div className='col-lg-4 '>
+					<button className='btn btn-danger' onClick={deleteDay}><i className='fa-solid fa-trash me-2'></i>Wyczyść</button>
+				</div>
+				<div className='col col-lg-8'>
+					<div className="input-group">	
+							<input type="date" className='form-control' defaultValue={date}/>
+							<button className='btn btn-primary'>Zapisz dzień</button>
+					</div>
+				</div>
 			</div>
-		</div>
 	</div>
-
+		
 </div>
 </div>
 </div>
@@ -441,7 +455,7 @@ function Diet(){
 			</div>
 			<div className="modal-footer">
 				<button type="button" className="btn btn-secondary" data-mdb-dismiss="modal">Anuluj</button>
-				<button type="button" className="btn btn-success" onClick={addOwnProduct} data-mdb-dismiss="modal">Dodaj</button>
+				<button type="button" className="btn btn-primary" onClick={addOwnProduct} data-mdb-dismiss="modal">Dodaj</button>
 			</div>
 			</div>
 		</div>

@@ -13,8 +13,8 @@ function ActivityLog(){
 
 	const tileClassName = ({ date, view }) => {
 		const formattedDate = date.toISOString().slice(0, 10);
-		const isActivityDate = activity.some((a) => a.Date === formattedDate);
-		const isDietDate = diet.some((d) => d.Date === formattedDate);
+		const isActivityDate = activity.diet && activity.some((a) => a.Date === formattedDate);
+		const isDietDate = Array.diet && diet.some((d) => d.Date === formattedDate);
 
 		if (view === 'month' && isActivityDate && !isDietDate) {
 			return 'activity-tile';
@@ -39,7 +39,7 @@ function ActivityLog(){
 		<div className='col-lg-8 col-sm-12'>
 			<h1 className='fw-bold'>{date.toLocaleDateString()}</h1>
 				<div>
-					{activity.map(a => {
+					{Array.activity && activity.map(a => {
 						if (a.Date === date.toISOString().slice(0, 10)) {
 							return (
 							<>								
@@ -70,7 +70,7 @@ function ActivityLog(){
 						}
 					})}
 
-					{diet.map(d => {
+					{Array.diet && diet.map(d => {
 						if (d.Date === date.toISOString().slice(0, 10)){
 							return (
 							<div className="row text-center mt-3"  key={d.Id}>

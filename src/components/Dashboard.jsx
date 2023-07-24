@@ -5,19 +5,26 @@ import Measurements from './Measurements';
 import AnimationFade from './AnimationFade';
 import ConfigCard from './ConfigCard';
 import AdminCard from './AdminCard';
+import { useContext } from 'react';
+import { AuthContext } from '../contexts/AuthProvider';
 
 function Dashboard(){
+
+	const { role } = useContext(AuthContext);
+
     return(
 	<AnimationFade>
 		<h1 className='col-lg-4 col-sm-12 fw-bold'>PULPIT</h1>
-		<div className='row'>
-			<div className="col-lg-4 col-sm-12">
-				<ConfigCard/>
+			<div className='row'>
+				<div className="col-lg-4 col-sm-12 mt-3">
+					<ConfigCard/>
+				</div>
+		{ role == 'Admin' && (
+				<div className="col-lg-4 col-sm-12 mt-3">
+					<AdminCard/>
+				</div>
+		)}
 			</div>
-			<div className="col-lg-4 col-sm-12">
-				<AdminCard/>
-			</div>
-		</div>
 		<div className='row mt-3'>
 			<div className="col-lg-4 col-sm-12">
 				<Weight/>

@@ -6,7 +6,6 @@ import AnimationFade from './AnimationFade';
 function Recipe() {
 
 	const params = useParams();
-	console.log(params.id);
 	const [recipe, setRecipe] = useState();
 	const [isLoading, setIsLoading] = useState(true);
 

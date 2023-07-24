@@ -20,19 +20,19 @@ function NavbarUser() {
       <div>
         <ul className="navbar-nav text-center">
           <li className="nav-item">
-          <NavLink className="nav-link" to="dashboard"><i className="fa-solid fa-home fa-xl"></i><p>PULPIT</p></NavLink>
+          <NavLink className="nav-link" to="dashboard"><i className="fa-regular fa-home fa-xl"></i><p>PULPIT</p></NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="diet"><i className="fa-solid fa-utensils fa-xl"></i><p>DIETA</p></NavLink>
+            <NavLink className="nav-link" to="diet"><i className="fa-regular fa-utensils fa-xl"></i><p>DIETA</p></NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="activity"><i className="fa-solid fa-dumbbell fa-xl"></i><p>TRENING</p></NavLink>
+            <NavLink className="nav-link" to="activity"><i className="fa-regular fa-dumbbell fa-xl"></i><p>TRENING</p></NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="log"><i className="fa-solid fa-calendar fa-xl"></i><p>DZIENNIK</p></NavLink>
+            <NavLink className="nav-link" to="log"><i className="fa-regular fa-calendar fa-xl"></i><p>DZIENNIK</p></NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link link-inactive" data-mdb-toggle="modal" data-mdb-target="#logutModal"><i className="fa-solid fa-circle-arrow-right fa-xl"></i><p>WYLOGUJ</p></NavLink>
+            <NavLink className="nav-link link-inactive" data-mdb-toggle="modal" data-mdb-target="#logutModal"><i className="fa-regular fa-circle-arrow-right fa-xl"></i><p>WYLOGUJ</p></NavLink>
           </li>
         </ul>
         </div>
@@ -43,19 +43,19 @@ function NavbarUser() {
     <div className="container-fluid justify-content-center">
       <ul className="navbar-nav text-center justify-content-evenly d-flex w-100">
         <li className="nav-item">
-        <NavLink className="nav-link" to="dashboard"><i className="fa-solid fa-home fa-xl"></i><p>PULPIT</p></NavLink>
+        <NavLink className="nav-link" to="dashboard"><i className="fa-regular fa-home fa-xl"></i><p>PULPIT</p></NavLink>
         </li>
         <li>
-          <NavLink className="nav-link" to="diet"><i className="fa-solid fa-utensils fa-xl"></i><p>DIETA</p></NavLink>
+          <NavLink className="nav-link" to="diet"><i className="fa-regular fa-utensils fa-xl"></i><p>DIETA</p></NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="activity"><i className="fa-solid fa-dumbbell fa-xl"></i><p>TRENING</p></NavLink>
+          <NavLink className="nav-link" to="activity"><i className="fa-regular fa-dumbbell fa-xl"></i><p>TRENING</p></NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="log"><i className="fa-solid fa-calendar fa-xl"></i><p>DZIENNIK</p></NavLink>
+          <NavLink className="nav-link" to="log"><i className="fa-regular fa-calendar fa-xl"></i><p>DZIENNIK</p></NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link link-inactive" data-mdb-toggle="modal" data-mdb-target="logutModal"><i className="fa-solid fa-circle-arrow-right fa-xl"></i><p>WYLOGUJ</p></NavLink>
+          <NavLink className="nav-link link-inactive" data-mdb-toggle="modal" data-mdb-target="logutModal"><i className="fa-regular fa-circle-arrow-right fa-xl"></i><p>WYLOGUJ</p></NavLink>
         </li>
       </ul>
     </div>

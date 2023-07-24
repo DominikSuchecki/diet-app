@@ -20,6 +20,7 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const userData = Cookies.get('userData')
+    
     if(userData){
       setId(userData.id)
       setUser(userData.user)

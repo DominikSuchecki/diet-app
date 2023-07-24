@@ -11,13 +11,13 @@ function NavbarGuest() {
       <div>
         <ul className="navbar-nav text-center">
           <li className="nav-item">
-            <NavLink className="nav-link" to="calculator"><i className="fa-solid fa-xl fa-calculator"></i><p>KALKULATOR</p></NavLink>
+            <NavLink className="nav-link" to="calculator"><i className="fa-regular fa-xl fa-calculator"></i><p>KALKULATOR</p></NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="activity"><i className="fa-solid fa-dumbbell fa-xl"></i><p>TRENING</p></NavLink>
+            <NavLink className="nav-link" to="activity"><i className="fa-regular fa-dumbbell fa-xl"></i><p>TRENING</p></NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="signIn"><i className="fa-solid fa-user fa-xl"></i><p>ZALOGUJ SIĘ</p></NavLink>
+            <NavLink className="nav-link" to="signIn"><i className="fa-regular fa-user fa-xl"></i><p>ZALOGUJ SIĘ</p></NavLink>
           </li>
         </ul>
       </div>
@@ -28,13 +28,13 @@ function NavbarGuest() {
     <div className="container-fluid justify-content-center">
       <ul className="navbar-nav text-center justify-content-evenly d-flex w-100">
         <li className="nav-item">
-          <NavLink className="nav-link" to="calculator"><i className="fa-solid fa-xl fa-calculator"></i><p>KALKULATOR</p></NavLink>
+          <NavLink className="nav-link" to="calculator"><i className="fa-regular fa-xl fa-calculator"></i><p>KALKULATOR</p></NavLink>
         </li>
         <li>
-          <NavLink className="nav-link" to="login"><i className="fa-solid fa-user fa-xl"></i><p>ZALOGUJ SIĘ</p></NavLink>
+          <NavLink className="nav-link" to="signIn"><i className="fa-regular fa-user fa-xl"></i><p>ZALOGUJ SIĘ</p></NavLink>
         </li>
         <li>
-          <NavLink className="nav-link" to="activity"><i className="fa-solid fa-dumbbell fa-xl"></i><p>TRENING</p></NavLink>
+          <NavLink className="nav-link" to="activity"><i className="fa-regular fa-dumbbell fa-xl"></i><p>TRENING</p></NavLink>
         </li>
       </ul>
     </div>

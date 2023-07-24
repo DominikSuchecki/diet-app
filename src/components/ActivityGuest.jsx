@@ -26,6 +26,10 @@ function ActivityGuest(){
     return(
 	<AnimationFade>
 			<h1 className='col-lg-4 col-sm-12 fw-bold'>TRENING</h1>
+			<p>
+			Oszacowanie aktywności fizycznej można przeprowadzić przy użyciu jednostek MET (metabolic equivalent of task), dzięki temu można określić, ile kalorii spala się podczas danej aktywności fizycznej.
+			Światowa Organizacja Zdrowia (WHO), zaleca wykonywanie co najmniej 150 minut umiarkowanej aktywności fizycznej lub 75 minut intensywnej aktywności fizycznej w ciągu tygodnia.
+			</p>
 			<div className='row col-lg-4 col-sm-12'>
 				<div className='col'>
 					<label htmlFor="weight" className='form-label'>Masa ciała</label>

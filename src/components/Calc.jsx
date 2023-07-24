@@ -37,6 +37,10 @@ function Calc(){
     return(
 	<AnimationFade>
 		<h1 className='col-lg-4 col-sm-12 fw-bold'>KALKULATOR</h1>
+		<p>
+		Znając swoje zapotrzebowanie kaloryczne, możesz dostosować swoją dietę w taki sposób, aby uzyskać odpowiednią ilość energii do utrzymania zdrowej masy ciała lub osiągnięcia określonych celów.
+		Warto jednak pamiętać, że każdy organizm jest unikalny, dlatego istotne jest monitorowanie własnych reakcji organizmu i ewentualne dostosowanie zapotrzebowania kalorycznego.
+		</p>
 		<form>
 			<div className="row">
 				<div className="col-lg-4 col-sm-12 mt-3">

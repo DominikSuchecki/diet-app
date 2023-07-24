@@ -183,7 +183,7 @@ function Products() {
 			</div>
 			<div className="modal-footer">
 				<button type="button" className="btn btn-secondary" data-mdb-dismiss="modal">Anuluj</button>
-				<button type="button" className="btn btn-success" data-mdb-dismiss="modal" onClick={() => addProduct()}>Dodaj</button>
+				<button type="button" className="btn btn-primary" data-mdb-dismiss="modal" onClick={() => addProduct()}>Dodaj</button>
 			</div>
 			</div>
 		</div>
