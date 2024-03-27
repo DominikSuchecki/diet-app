@@ -1,6 +1,6 @@
-# Diet and Workout Tracker App
+# Diet and Workout Tracker App (The code still needs refactoring. I'm not happy with these large components)
 
-This app helps you track your diet and workouts. You can use it to:
+This is my first project in react. It helps you track your diet and workouts. You can use it to:
 
 1. **Calculate your calorie needs**: The app helps you calculate your daily calorie needs based on your age, sex, weight, height, and activity level.
 2. **Calculate the energy expenditure of activities**: You can enter data about your workouts, and the app will calculate how many calories you burned during each activity.
@@ -10,11 +10,12 @@ This app helps you track your diet and workouts. You can use it to:
 ## Technologies
 
 The app is built on the following technologies:
-- **Frontend**: React !React Icon.jpg)
+- **Frontend**: React
 - **UI**: MDBootstrap
-- **Backend**: Laravel API !Laravel Icon.jpg)
+- **Backend**: Laravel API
 
 Libraries used:
+- `react-router-dom`
 - `react-calendar`
 - `react-chartjs-2`
 - `axios`
