@@ -1,26 +1,34 @@
-import React, { useState, useEffect, createContext } from 'react';
+import { useState, useEffect, createContext, useContext } from 'react';
 import Axios from 'axios';
+import { AuthContext } from './AuthProvider';
+import { API_URL } from '../api';
 
 const ActivityContext = createContext({});
 
 const ActivityProvider = ({ children }) => {
   const [activity, setActivity] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [update, setUpdate] = useState(0);
 
-  useEffect(() => {
-    Axios.get('http://localhost/API/Activity.php')
-      .then((response) => {
-        setIsLoading(false);
-        setActivity(response.data);
+  const { auth, token } = useContext(AuthContext)
+
+    useEffect(() => {
+      if(auth){
+      Axios.get(`${API_URL}/activity`, {
+        headers: { Authorization: `Bearer ${token}` }
       })
-      .catch((error) => {
-        console.error(error);
-        setIsLoading(true);
-      });
-  }, []);
+        .then((response) => {
+          setIsLoading(false);
+          setActivity(response.data);
+        })
+        .catch((error) => {
+          setIsLoading(true);
+        });
+      }
+}, [auth, token, update]);
 
   return (
-    <ActivityContext.Provider value={{ activity, isLoading }}>
+    <ActivityContext.Provider value={{ activity, isLoading, update, setUpdate }}>
       {children}
     </ActivityContext.Provider>
   );

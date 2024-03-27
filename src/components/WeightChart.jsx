@@ -1,4 +1,4 @@
-import {useContext} from 'react';
+import { useContext } from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -12,7 +12,7 @@ import {
 import { Line } from 'react-chartjs-2';
 import { WeightContext } from '../contexts/WeightProvider';
 
-function WeightChart(){
+const WeightChart = () => {
 	const {weight} = useContext(WeightContext);
 
 	ChartJS.register(
@@ -33,22 +33,24 @@ function WeightChart(){
 		},
 		title: {
 		display: true,
-		text: 'Historia masy ciała',
+		text: 'Weight chart',
 		}
 	}
 	};
 
-	const labels = weight.map((w) => w.Date);
-	const data = {
-	labels,
-	datasets: [
-		{
-		label: 'Masa ciała',
-		data: weight.map((w) => w.Weight),
-		borderColor: 'rgb(46, 204, 113)',
-		backgroundColor: 'rgba(46, 204, 113, 0.5)',
+	if( weight.length > 1 ) {
+		const labels = weight.map((w) => w.date);
+		var data = {
+		labels,
+		datasets: [
+			{
+			label: 'Weight',
+			data: weight.map((w) => w.weight),
+			borderColor: '#3b71ca',
+			backgroundColor: 'rgba(59,113,202,0.5)',
+			}
+		]
 		}
-	]
 	}
 
 	const exampleOptions = {
@@ -59,7 +61,7 @@ function WeightChart(){
 			},
 			title: {
 			display: true,
-			text: 'Brak danych - Dodaj swoją masę ciała',
+			text: 'No weight data found',
 			}
 		}
 	};
@@ -69,18 +71,18 @@ function WeightChart(){
 		labels: exampleLabels,
 		datasets: [
 			{
-			label: 'Masa ciała',
-			data: [60, 56, 58, 62, 64],
-			borderColor: 'rgb(59,113,202)',
-			backgroundColor: 'rgba(59,113,202, 0.5)',
+			label: 'Weight',
+			data: [72, 70, 68, 72, 76],
+			borderColor: '#4f4f4f',
+			backgroundColor: 'rgba(79,79,79,0.5)',
 			}
 		]
 		}
 
     return(
-	<>
-		{weight.length ? <Line options={options} data={data} /> : <Line options={exampleOptions} data={exampleData}/>}
-	</>
+	<div className='mt-3'>
+		{weight.length > 1 ? <Line options={options} data={data} /> : <Line options={exampleOptions} data={exampleData}/>}
+	</div>
     )
 }
 

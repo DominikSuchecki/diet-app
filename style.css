@@ -13,27 +13,28 @@ body{
 }
 
 .react-calendar__tile{
-    border-radius: 0.25rem;
+    border-radius: 10px;
 }
 
 .activity-tile{
-  background-color: green!important;
+  background-color: var(--mdb-primary)!important;
 }
 
 .diet-tile{
-    background-color: orange!important;
+    background-color: var(--mdb-success)!important;
 }
 
 .both-tile{
-  background-color: blue!important;
+  background-color: var(--mdb-danger)!important;
 }
 
 .react-calendar{
     border-radius: 0.5rem;
+    border: 0px!important;
 }
 
 .table-responsive{
-    max-height: 250px;
+    max-height: 400px;
 }
 
 .navbar{

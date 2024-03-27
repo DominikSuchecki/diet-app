@@ -1,9 +1,9 @@
 {
-    "name": "4Active",
-    "short_name": "4Active",
+    "name": "Diet app",
+    "short_name": "Diet app",
     "start_url": ".",
     "display": "standalone",
-    "theme_color": "#000000",
+    "theme_color": "#3b71ca",
     "background_color": "#ffffff",
     "icons": [
       {

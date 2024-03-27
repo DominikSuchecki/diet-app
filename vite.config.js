@@ -7,5 +7,4 @@ export default defineConfig({
   build: {
     minify: true,
   },
-  base: '/react-app',
 })

@@ -1,26 +1,33 @@
-import React, { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState, useContext } from 'react';
 import Axios from 'axios';
+import { AuthContext } from './AuthProvider';
+import { API_URL } from '../api';
 
 const DietContext = createContext({});
 
 const DietProvider = ({ children }) => {
   const [diet, setDiet] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    Axios.get('http://localhost/API/Diet.php')
-      .then((response) => {
-        setIsLoading(false);
-        setDiet(response.data);
+  const { auth, token } = useContext(AuthContext)
+  const [update, setUpdate] = useState(0);
+  
+    useEffect(() => {
+      if(auth){
+      Axios.get(`${API_URL}/diet`, {
+        headers: { Authorization: `Bearer ${token}` }
       })
-      .catch((error) => {
-        console.error(error);
-        setIsLoading(true);
-      });
-  }, []);
+        .then((response) => {
+          setIsLoading(false);
+          setDiet(response.data);
+        })
+        .catch((error) => {
+          setIsLoading(true);
+        });
+      }
+    }, [auth, token, update]);
 
   return (
-    <DietContext.Provider value={{ diet, isLoading }}>
+    <DietContext.Provider value={{ diet, isLoading, update, setUpdate }}>
       {children}
     </DietContext.Provider>
   );
